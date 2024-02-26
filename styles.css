@@ -1,0 +1,117 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    background: linear-gradient(#200016, #10001f);
+    height: fit-content;
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 95%;
+    margin: 20px auto 0 auto;
+    position: fixed;
+    z-index: 1;
+}
+
+header .logo {
+    color: #fff;
+    font-size: 35px;
+    margin-left: 20px;
+}
+
+header ul li {
+    display: inline-block;
+    margin: 10px;
+}
+
+header ul li a {
+    padding: 10px;
+}
+
+header ul li a:hover,
+header .active {
+    background: #fff;
+    border-radius: 20px;
+    color: #200016;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.main img {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    /* عشان الصور اللي بتبكسل  */
+}
+
+.main h2 {
+    color: #fff;
+    font-size: 35px;
+    text-transform: uppercase;
+    transform: translateY(150px)
+}
+
+.main .moon {
+    width: fit-content;
+    mix-blend-mode: screen;
+    transform: translateY(50px);
+}
+
+.main::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to top, #200016, transparent);
+}
+
+.content {
+    position: relative;
+    color: #fff;
+    margin: 50px 20px 20px 20px;
+
+}
+
+.content p {
+    margin-top: 20px;
+    line-height: 25px;
+}
+
+
+
+@media(max-width:768px) {
+    header .logo {
+        margin-left: 50px;
+    }
+
+    header ul {
+        display: none;
+    }
+
+    .content p {
+        margin-top: 50px;
+    }
+
+}
